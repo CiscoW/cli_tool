@@ -118,6 +118,10 @@ class Cli(object):
         path = obj.get("path")
         config = obj.get("config")
         file_path = os.path.join(path, file_name)
+        if os.path.exists(file_path):
+            click.echo(f"{file_path}文件已经存在")
+            return
+
         # 创建文件夹
         self.mkdir(path)
         if file_name != "nil":
