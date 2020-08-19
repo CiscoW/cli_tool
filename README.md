@@ -1,5 +1,5 @@
 # cli_tool
-自动生成代码工具CLI工具
+自动生成代码工程CLI工具
 ## 使用方法
 ```python
 python cli.py -cf config.yml
