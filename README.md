@@ -27,17 +27,13 @@ folder_application:          # application文件夹
     substitute:              # 模板文件中要替换的变量
       ClassName: *A          # 可以采用引用全局变量
 
-folder_domain:
-  folder_common:
-    folder_model:
-      file_config.py:
-        template_file:
-        
-  folder_repo:
-    file_test.py:
-      template_file:
-
 folder_notfile:
   file_nil: # nil 代表只要创建文件夹
 
+```
+
+## 模板文件
+```python
+class $ClassName(object):  # $xx代表xx为变量，可以通过在配置文件中设置实际值来替换
+    pass
 ```
