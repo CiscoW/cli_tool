@@ -1,0 +1,29 @@
+globals:
+  # 模板输出位置 默认当前
+  template_output: "./test"
+
+  # 变量复用
+  a: &A "RealValue66"
+
+
+folder_application:          # folder 代表文件夹
+  file_demo.py:             # file 代表文件, file_nil 代表只要创建文件夹不创建文件
+    template_file:         # 默认为templates目录下同file_xx尾部xx同名文件，也可以指定
+    substitute:           # 模板文件中要替换的变量
+      ClassName: *A
+
+folder_domain:
+  folder_common:
+    folder_model:
+      file_config.py:
+        template_file:
+        substitute:
+          var1: "realValue1"
+  folder_repo:
+    file_test.py:
+      template_file:
+      substitute:
+        var2: "realValue2"
+
+folder_notfile:
+  file_nil: # nil 代表只要创建文件夹
