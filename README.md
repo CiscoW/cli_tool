@@ -37,3 +37,5 @@ folder_notfile:
 class $ClassName(object):  # $xx代表xx为变量，可以通过在配置文件中设置实际值来替换
     pass
 ```
+
+> 所有模板文件都要放在`templates`文件夹下，具体目录位置可以自己指定
